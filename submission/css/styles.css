@@ -1,0 +1,568 @@
+/* 
+   IG FISH FARM - CSS 
+   Fresh From The Lake
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables - Inspired by Lake Waters and Fresh Tilapia */
+:root {
+    --lake-deep: #0A4C6E;
+    --lake-mid: #1B6B87;
+    --fresh-teal: #2D8F8C;
+    --water-light: #D4EAF0;
+    --premium-gold: #C9A03D;
+    --premium-glow: rgba(201, 160, 61, 0.2);
+    --warm-sand: #F5EDE0;
+    --terracotta: #C26D5C;
+    --text-primary: #1E3A4D;
+    --text-secondary: #4A627A;
+    --text-light: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: var(--water-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background-color: var(--lake-deep);
+    color: var(--text-light);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+
+.logo .slogan {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Navigation - using flexbox, stays in one line on mobile */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background-color: var(--premium-gold);
+    color: var(--lake-deep);
+    transform: translateY(-2px);
+}
+
+/* HERO / BANNER SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--text-light);
+    background: linear-gradient(135deg, rgba(10, 76, 110, 0.85), rgba(10, 76, 110, 0.7));
+    padding: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.hero-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+}
+
+/* Container for consistent width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Headings with gold underline accent */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: var(--lake-deep);
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--premium-gold);
+    border-radius: 2px;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+    padding: 3rem 0;
+    background-color: var(--warm-sand);
+}
+
+.about-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--premium-gold);
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.payment-note {
+    background-color: var(--water-light);
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--terracotta);
+    font-weight: 500;
+    color: var(--lake-deep);
+}
+
+/* Locations highlight box - shows all delivery areas */
+.locations-highlight {
+    background: var(--lake-deep);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.locations-highlight h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--premium-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.locations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.location-badge {
+    background: rgba(255,255,255,0.15);
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(2px);
+    transition: all 0.2s;
+}
+
+.location-badge:hover {
+    background: var(--premium-gold);
+    color: var(--lake-deep);
+    transform: scale(1.02);
+}
+
+/* ===== PRODUCTS SECTION ===== */
+/* Using CSS GRID here for the 5-column layout of fish sizes */
+.products {
+    padding: 3rem 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Individual Product Card styling */
+.product-card {
+    background: var(--warm-sand);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--lake-mid);
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    border-color: var(--premium-gold);
+}
+
+/* POPULAR cards for Size 2 & 3 - gold border to highlight they're most popular */
+.product-card.popular {
+    border: 2px solid var(--premium-gold);
+    background: linear-gradient(135deg, var(--warm-sand), #FFF8F0);
+    position: relative;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--premium-gold);
+    color: var(--lake-deep);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    background: #e9f0f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.03);
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    color: var(--lake-deep);
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--terracotta);
+    margin: 0.5rem 0;
+}
+
+.price span {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+.description {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.star {
+    color: var(--premium-gold);
+}
+
+/* Delivery Note - using flexbox for the delivery options layout */
+.delivery-note {
+    background: var(--lake-deep);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* ===== FOOTER SECTION ===== */
+footer {
+    background-color: var(--lake-deep);
+    color: var(--text-light);
+    padding: 3rem 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-brand h3 {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.footer-brand p {
+    font-style: italic;
+    opacity: 0.85;
+    font-size: 0.9rem;
+}
+
+/* Contact section Placeholder details */
+.footer-contact {
+    flex: 1;
+    text-align: right;
+    max-width: 450px;
+}
+
+.footer-contact h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--premium-gold);
+}
+
+.footer-contact p {
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+}
+
+.footer-note-text {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* tablets and phones */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .logo .slogan {
+        font-size: 0.65rem;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    .hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .hero-text {
+        padding: 1rem;
+        bottom: 10%;
+        width: 95%;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 0.8rem;
+    }
+    
+ /* Product grid - stacks vertically on mobile */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .price {
+        font-size: 1.3rem;
+    }
+    
+/* Delivery note stacks vertically */
+    .delivery-note {
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+    
+/* Footer stacks but keeps logo and contact aligned properly */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-contact {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+/* Section headings smaller */
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+/* About section adjustments */
+    .about-content {
+        padding: 1rem;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+    }
+    
+    .payment-note {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .locations-grid {
+        gap: 0.5rem;
+    }
+    
+    .location-badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
+}
