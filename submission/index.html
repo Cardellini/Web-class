@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>IG Fish Farm</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 
 </head>
 
@@ -25,12 +26,21 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+        <button id="theme-toggle">🌙 Dark Mode</button>
+        <a href="#wishlist-zone" class="wishlist-btn">📋</a>
+    </div>
     </header>
 <main>
     <!-- HERO / BANNER SECTION -->
     <section id="home" class="hero">
-        <div class="hero-image"> <!-- Replace "banner.jpeg" with your actual banner JPEG filename -->
+        <div class="hero-image"> 
             <img src="Images/banner.jpeg" alt="IG Fish Farm - Fresh Tilapia harvest from the lake">
+            <div class="banner-caption">
+            <h3>🐟 IG Fish Farm</h3>
+            <p>Fresh From The Lake — Trusted by Gikomba businesses</p>
+            <p class="caption-phone">📞 0712 345 678</p>
+            </div> 
         </div>
         <div class="hero-text">
             <h2>Fresh Tilapia — Fresh From The Lake</h2>
@@ -79,84 +89,37 @@
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION - Sizes 1 to 5 -->
-    <section id="products" class="products">
+    <!-- PRODUCTS -->
+    <section id="products" class="inventory">
         <div class="container">
-            <h2>Our Tilapia Sizes & Wholesale Prices</h2>
-            <p class="section-subtitle">Sizes 2 & 3 are the most popular — perfect for frying & resale to families</p>
+            <h2>Our Harvest</h2>
+            <p>Sizes 2 & 3 are our staples for frying and resale.</p>
+            <div id="product-grid" class="product-grid"></div>
+        </div>
+    </section>
 
-            <div class="product-grid">
-                <!-- Size 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="Images/size1.jpeg" alt="Fresh tilapia size 1">
-                    </div>
-                    <div class="product-info">
-                        <h3>Size 1</h3>
-                        <p class="price">KES 330<span>/kg</span></p>
-                        <p class="description">Small size, ideal for individual meals. A total of 280pcs per crate.</p>
-                    </div>
-                </div>
-
-
-                <div class="product-card popular">
-                    <div class="popular-badge"> POPULAR</div>
-                    <div class="product-image">
-                        <img src="Images/size2.jpeg" alt="Premium tilapia size 2">
-                    </div>
-                    <div class="product-info">
-                        <h3>Size 2 <span class="star">⭐</span></h3>
-                        <p class="price">KES 390<span>/kg</span></p>
-                        <p class="description">Perfect for frying • Most popular for business. A total of 220pcs per
-                            crate.</p>
-                    </div>
-                </div>
-
-                <!-- Size 3 - POPULAR -->
-                <div class="product-card popular">
-                    <div class="popular-badge">POPULAR</div>
-                    <div class="product-image">
-                        <img src="Images/size3.jpeg" alt="Popular tilapia size 3">
-                    </div>
-                    <div class="product-info">
-                        <h3>Size 3 <span class="star">⭐</span></h3>
-                        <p class="price">KES 390<span>/kg</span></p>
-                        <p class="description">Excellent for frying • Generous portion. A total of 150pcs per crate.</p>
-                    </div>
-                </div>
-
-                <!-- Size 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="Images/size4.jpeg" alt="Fresh tilapia size 4">
-                    </div>
-                    <div class="product-info">
-                        <h3>Size 4</h3>
-                        <p class="price">KES 375<span>/kg</span></p>
-                        <p class="description">Great for family meals & institutions. A total of 120pcs per crate.</p>
-                    </div>
-                </div>
-
-                <!-- Size 5 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="Images/size5.jpeg" alt="Fresh tilapia size 5">
-                    </div>
-                    <div class="product-info">
-                        <h3>Size 5</h3>
-                        <p class="price">KES 375<span>/kg</span></p>
-                        <p class="description">Balanced size, excellent yield. A total of 100pcs per crate.</p>
-                    </div>
-                </div>
+    <!-- WISHLIST -->
+    <section id="wishlist-zone" class="wishlist">
+        <div class="container">
+            <h3>My Interest List</h3>
+            <div class="wishlist-controls">
+                <input type="text" id="wishlist-input" placeholder="Size you need...">
+                <button id="wishlist-add-btn">Add Item</button>
             </div>
+            <div id="wishlist-items"></div>
+        </div>
+    </section>
 
-            <!-- Delivery Note - Flexbox -->
-            <div class="delivery-note">
-                <p>🚚 <strong>Delivery:</strong> Motorbikes for small orders</p>
-                <p>🛺 <strong>Large Orders:</strong> Tuktuks for bulk</p>
-                <p>❄️ <strong>Cold Chain:</strong> Refrigerated fish boxes</p>
-                <p>📍 <strong>All locations:</strong> Kitengela to Kibera & beyond</p>
-            </div>
+    <!-- INQUIRY -->
+    <section id="inquiry-zone" class="inquiry">
+        <div class="container">
+            <h3>Order Inquiry</h3>
+            <form id="order-form">
+                <input type="text" id="customer-name" placeholder="Full Name" required>
+                <input type="tel" id="customer-phone" placeholder="WhatsApp Number" required>
+                <button type="submit">Send Request</button>
+            </form>
+            <div id="form-feedback"></div>
         </div>
     </section>
 
@@ -180,7 +143,6 @@
             <p>© 2026 IG Fish Farm — Fresh from the lake, daily harvest.</p>
         </div>
     </footer>
-</main>
 </body>
 
 </html>
